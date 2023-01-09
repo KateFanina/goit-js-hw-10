@@ -68,6 +68,8 @@ function onSearch(event) {
         addCountryNodes(countries);
         if (countries.length === 1) {
           addCountryInfo(countries[0]);
+        } else {
+          countryInfo.innerHTML = '';
         }
       })
       .catch(() => {
