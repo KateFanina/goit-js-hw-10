@@ -12,10 +12,10 @@ function addCountryNodes(countries) {
   const markup = countries
     .map(
       country =>
-        `<li style="list-style: none">
+        `<div style="list-style: none">
           <img alt=${country.altSpellings} src=${country.flags.svg} width="30" />
           ${country?.name?.official}
-        </li>`
+        </div>`
     )
     .join('');
   countryList.innerHTML = markup;
@@ -24,22 +24,22 @@ function addCountryNodes(countries) {
 function addCountryInfo(country) {
   const markup = `
   <div style = "display: flex">
-    <h2>
+    <h2 class="country-details">
         Capital: &nbsp
     </h2>
-    <span style = "padding-top: 30px">${country.capital}</span>
+    <span class="country-information">${country.capital}</span>
   </div>
   <div style = "display: flex">
-    <h2>
+    <h2 class="country-details">
       Population: &nbsp 
     </h2>
-    <span style = "padding-top: 30px">${country.population}</span>
+    <span class="country-information">${new Intl.NumberFormat('ua-UA').format(country.population)}</span>
   </div>
   <div style = "display: flex">
-    <h2>
+    <h2 class="country-details">
       Languages: &nbsp
     </h2>
-    <span style = "padding-top: 30px">
+    <span class="country-information">
       ${Object.values(country.languages).join(', ')}
     </span>
   </div>`;

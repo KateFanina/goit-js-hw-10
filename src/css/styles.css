@@ -15,6 +15,46 @@ body {
 #search-box {
   font: inherit;
   padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+  width: 230px;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,.3));
+  background: #F3FFFF;
+  border: 2px solid rgba(173,169,169,.3);
+  border-radius: 8px;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  z-index: 1;
+}
+
+#search-box:focus{
+  border-color: skyblue;
+  outline: none;
+}
+
+.wrapper{
+position: absolute;
+top: 50%;
+left: 40%;
+background-color: #F3FFFF;
+border-radius: 8px;
+padding: 8px;
+filter: drop-shadow(0 4px 4px #0000004d);
+}
+
+.initial-image{
+  width: 100%;
+opacity: 0.6;
+}
+
+.country-list{
+padding: 0;
+margin: 0;
+}
+
+.country-details{
+margin: 0;
+}
+
+.country-information{
+padding-top: 8px;
 }
